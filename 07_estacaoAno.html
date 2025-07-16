@@ -7,11 +7,62 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt("Em qual hemisfério você está?").toUpperCase();
+    const mes = Number(prompt("Qual o número do mês que você está?"));
+    resultado;
+    hemisferio;
     
     //PROCESSAMENTO
-
-
+    switch (hemisferio) {
+        case "NORTE":
+            switch(mes) {
+                case "12":
+                case "1":
+                case "2":
+                    resultado = "Inverno";
+                    break;
+                case "3":
+                case "4": 
+                case "5": 
+                    resultado = "Primavera";
+                    break;
+                case "6":
+                case "7": 
+                case "8":
+                    resultado = "Verão";
+                    break;
+                case "9":
+                case "10": 
+                case "11":
+                    resultado = "Outono";
+                    break;
+            }
+        case "SUL": 
+            switch(mes) {
+                case "12":
+                case "1":
+                case "2":
+                    resultado = "Verão";
+                    break;
+                case "3":
+                case "4": 
+                case "5": 
+                    resultado = "Outono";
+                    break;
+                case "6":
+                case "7": 
+                case "8":
+                    resultado = "Inverno";
+                    break;
+                case "9":
+                case "10": 
+                case "11":
+                    resultado = "Primavera";
+                    break;
+            }
+    }
+    
     //SAÍDA
+    alert(`No seu atual momento é: ${resultado}`);
 
 </script>
