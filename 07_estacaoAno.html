@@ -7,62 +7,69 @@
     */
 
     //ENTRADA
-    const hemisferio = prompt("Em qual hemisfério você está?").toUpperCase();
-    const mes = Number(prompt("Qual o número do mês que você está?"));
-    resultado;
-    hemisferio;
+    const hemisferio = prompt("Em qual hemisfério você está?(S-sul, N-norte)").toUpperCase();
+    const mes = Number(prompt("Qual é o mês atual(em números, sem o 0 na frente)?"));
     
+   
     //PROCESSAMENTO
-    switch (hemisferio) {
-        case "NORTE":
-            switch(mes) {
-                case "12":
-                case "1":
-                case "2":
-                    resultado = "Inverno";
-                    break;
-                case "3":
-                case "4": 
-                case "5": 
-                    resultado = "Primavera";
-                    break;
-                case "6":
-                case "7": 
-                case "8":
-                    resultado = "Verão";
-                    break;
-                case "9":
-                case "10": 
-                case "11":
-                    resultado = "Outono";
-                    break;
-            }
-        case "SUL": 
-            switch(mes) {
-                case "12":
-                case "1":
-                case "2":
-                    resultado = "Verão";
-                    break;
-                case "3":
-                case "4": 
-                case "5": 
-                    resultado = "Outono";
-                    break;
-                case "6":
-                case "7": 
-                case "8":
-                    resultado = "Inverno";
-                    break;
-                case "9":
-                case "10": 
-                case "11":
-                    resultado = "Primavera";
-                    break;
-            }
-    }
+
+
+
     
+    switch (hemisferio) {
+        case `N`:
+            switch(mes) {
+                case 12:
+                case 1:
+                case 2:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Inverno`);
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Primavera`);
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Verão`);
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Outono`);
+                    break;
+            }
+
+        case "S":
+            switch(mes) {
+                case 12:
+                case 1:
+                case 2:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Verão`);
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Outono`);
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Inverno`);
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    alert(`A estação atual, baseada no mês e no hemisfério, é: Primavera`);
+                    break;
+            }
+            default:                
+            alert(`Dados inválidos!`);
+            break;
+    }
+   
     //SAÍDA
-    alert(`No seu atual momento é: ${resultado}`);
+
 
 </script>
